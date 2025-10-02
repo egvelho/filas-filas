@@ -1,3 +1,10 @@
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
+
 export class Queue {
   constructor() {
     this.start = null;
