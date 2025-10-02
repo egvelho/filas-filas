@@ -42,9 +42,21 @@ export class Queue {
     this.size--;
     return node;
   }
-  isEmpty() {}
-  clear() {}
-  peek() {}
+  isEmpty() {
+    return this.size === 0;
+  }
+  clear() {
+    this.start = null;
+    this.end = null;
+    this.size = 0;
+  }
+  peek() {
+    if (this.start === null) {
+      return null;
+    }
+
+    return this.start.value;
+  }
   print() {
     let node = this.start;
     while (node) {
