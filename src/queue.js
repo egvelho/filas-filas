@@ -12,9 +12,44 @@ export class Queue {
     this.size = 0;
   }
 
-  enqueue(value) {}
-  dequeue() {}
+  enqueue(value) {
+    const node = new Node(value);
+
+    if (this.end !== null) {
+      this.end.next = node;
+    }
+
+    this.end = node;
+
+    if (this.start === null) {
+      this.start = this.end;
+    }
+
+    this.size++;
+  }
+  dequeue() {
+    if (node === null) {
+      return null;
+    }
+
+    const node = this.start;
+    this.start = this.start.next;
+
+    if (this.start === null) {
+      this.end = null;
+    }
+
+    this.size--;
+    return node;
+  }
   isEmpty() {}
   clear() {}
   peek() {}
+  print() {
+    let node = this.start;
+    while (node) {
+      console.log(node.value);
+      node = node.next;
+    }
+  }
 }

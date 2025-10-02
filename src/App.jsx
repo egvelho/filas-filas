@@ -1,3 +1,11 @@
+import { Queue } from "./queue";
+
+const queue = new Queue();
+queue.enqueue("Burro"); // primeiro
+queue.enqueue("Farquad");
+queue.enqueue("Fiona");
+queue.enqueue("Encantado"); // último
+
 const compras = [
   "Salgadinho",
   "Toddynho",
@@ -8,7 +16,8 @@ const compras = [
 ];
 
 export default function App() {
-  const listaDeCompras = compras.map((compra) => <li>{compra}</li>);
+  //const listaDeCompras = compras.map((compra) => <li>{compra}</li>);
 
-  return <ul>{listaDeCompras}</ul>;
+  return <div>hello</div>;
+  //return <ul>{listaDeCompras}</ul>;
 }
