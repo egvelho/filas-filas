@@ -28,7 +28,7 @@ export class Queue {
     this.size++;
   }
   dequeue() {
-    if (node === null) {
+    if (this.start === null) {
       return null;
     }
 
@@ -40,7 +40,7 @@ export class Queue {
     }
 
     this.size--;
-    return node;
+    return node.value;
   }
   isEmpty() {
     return this.size === 0;
